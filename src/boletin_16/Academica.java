@@ -13,8 +13,9 @@ public class Academica {
     
     // Constructor
 
-    public Academica(String nome, Persoal alumno) {
+    public Academica(String nome,float nota, Persoal alumno) {
         this.nome = nome;
+        this.nota = nota;
         this.alumno = alumno;
     }
     
@@ -46,24 +47,6 @@ public class Academica {
 
     public void setAlumno(Persoal alumno) {
         this.alumno = alumno;
-    }
-    
-    // Funciones
-    
-    public void calcularNota(int nNotas){
-        
-        int i = 1;
-        float notas = 0;
-        
-        do{
-            
-            System.out.print("Introduce la nota numero " + i + ": ");
-            notas += sc.nextFloat();
-            
-            i += 1;
-        } while (i <= nNotas);
-        
-        this.nota = notas/ (i-1);
     }
     
     // To String
